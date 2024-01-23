@@ -1,3 +1,3 @@
 # Dimension-reduction-methods-in-machine-learning
-![DMR](https://images.prismic.io/encord/52bcd8ad-b25a-4225-ba5d-6b3f6a97e424_CNN+timeline.png?auto=compress,format)
+![DMR](https://media.licdn.com/dms/image/D5612AQEHtGYCPv5Lfg/article-cover_image-shrink_720_1280/0/1665646707963?e=2147483647&v=beta&t=l0VOr9I5_4SIZqPKDncnKVPZFCeNQqTNuSHHFLWzMKk)
 This repository aims to provide a comprehensive collection of dimension reduction techniques, along with implementations and resources for each method.
