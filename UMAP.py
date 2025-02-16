@@ -3,7 +3,6 @@ import scipy.spatial
 import scipy.sparse
 import scipy.sparse.linalg
 from sklearn.neighbors import NearestNeighbors
-
 class UMAP:
     def __init__(self, n_neighbors=15, n_components=2, min_dist=0.1, n_epochs=500, learning_rate=1.0):
         self.n_neighbors = n_neighbors
@@ -83,3 +82,20 @@ class UMAP:
                 print(f"Epoch {epoch}/{self.n_epochs} complete")
 
         return embedding
+
+# Another alternative is the UMAP package
+# It starts with installing via the following code:
+!pip install umap-learn
+import umap
+# building Embedding 
+embedding = umap.UMAP(n_neighbors=5).fit_transform(data)
+# plot it using matplotlib
+import matplotlib.pyplot as plt
+
+fig, ax = plt.subplots(1, figsize=(14, 10))
+plt.scatter(*embedding.T, s=0.3, c=target, cmap='Spectral', alpha=1.0)
+plt.setp(ax, xticks=[], yticks=[])
+cbar = plt.colorbar(boundaries=np.arange(11)-0.5)
+cbar.set_ticks(np.arange(10))
+cbar.set_ticklabels(classes)
+plt.title('Embedded Data via UMAP');
